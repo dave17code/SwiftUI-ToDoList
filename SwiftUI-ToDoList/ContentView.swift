@@ -8,16 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var todoList: [Todo] = [
+        Todo(title: "친구 만나기"),
+        Todo(title: "과제 제출하기"),
+        Todo(title: "푹쉬기")
+    ]
+    
     var body: some View {
         NavigationStack {
             List {
-                HStack {
-                    Image(systemName: "circle")
-                        .foregroundStyle(Color.pink)
-                    NavigationLink {
-                        Text("다음 화면 입니다.")
-                    } label: {
-                        Text("투두1")
+                ForEach(todoList) { todo in
+                    HStack {
+                        todo.isCompleted ? Image(systemName: "circle.fill")
+                            .foregroundStyle(Color.pink)
+                            .onTapGesture {
+                                todo.isCompleted.toggle()
+                            } : Image(systemName: "circle")
+                            .foregroundStyle(Color.pink)
+                            .onTapGesture {
+                                todo.isCompleted.toggle()
+                            }
+                        NavigationLink {
+                            Text("다음 화면 입니다.")
+                        } label: {
+                            Text(todo.title)
+                                .strikethrough(todo.isCompleted, color: Color.gray)
+                                .foregroundStyle(todo.isCompleted ? Color.gray : Color.primary)
+                        }
                     }
                 }
             }
