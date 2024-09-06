@@ -9,13 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                HStack {
+                    Image(systemName: "circle")
+                        .foregroundStyle(Color.pink)
+                    NavigationLink {
+                        Text("다음 화면 입니다.")
+                    } label: {
+                        Text("투두1")
+                    }
+                }
+            }
+            .navigationTitle("ToDo🏓")
         }
-        .padding()
     }
 }
 
