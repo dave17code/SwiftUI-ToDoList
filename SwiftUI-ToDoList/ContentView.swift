@@ -15,6 +15,13 @@ struct ContentView: View {
         Todo(title: "푹쉬기")
     ]
     
+    func addTodo() {
+        withAnimation {
+            let newTodo = Todo(title: "새로운 투두")
+            todoList.append(newTodo)
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             Divider()
@@ -48,11 +55,7 @@ struct ContentView: View {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: {
-                        print("플러스 버튼이 눌렸어요")
-                        let newTodo = Todo(title: "새로운 투두")
-                        todoList.append(newTodo)
-                    }, label: {
+                    Button(action: addTodo, label: {
                         Image(systemName: "plus")
                     })
                 }
