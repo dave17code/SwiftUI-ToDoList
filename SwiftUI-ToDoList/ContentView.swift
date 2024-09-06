@@ -17,6 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
+            Divider()
             List {
                 ForEach(todoList) { todo in
                     HStack {
@@ -38,8 +39,24 @@ struct ContentView: View {
                         }
                     }
                 }
+                .listRowSeparator(.hidden)
             }
+            .listStyle(.plain)
             .navigationTitle("ToDo🏓")
+            .toolbar {
+                ToolbarItem {
+                    EditButton()
+                }
+                ToolbarItem {
+                    Button(action: {
+                        print("플러스 버튼이 눌렸어요")
+                        let newTodo = Todo(title: "새로운 투두")
+                        todoList.append(newTodo)
+                    }, label: {
+                        Image(systemName: "plus")
+                    })
+                }
+            }
         }
     }
 }
