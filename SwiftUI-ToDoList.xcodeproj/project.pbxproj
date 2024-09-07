@@ -12,6 +12,7 @@
 		AF6DB6C22C8A803F004E9A40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6DB6C12C8A803F004E9A40 /* Assets.xcassets */; };
 		AF6DB6C52C8A803F004E9A40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6DB6C42C8A803F004E9A40 /* Preview Assets.xcassets */; };
 		AF6DB6CC2C8A8C9D004E9A40 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6DB6CB2C8A8C9D004E9A40 /* Todo.swift */; };
+		DA60099F2C8AFDC800B0A0D8 /* ToDoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA60099E2C8AFDC800B0A0D8 /* ToDoDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		AF6DB6C12C8A803F004E9A40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF6DB6C42C8A803F004E9A40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF6DB6CB2C8A8C9D004E9A40 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		DA60099E2C8AFDC800B0A0D8 /* ToDoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				AF6DB6BD2C8A803E004E9A40 /* SwiftUI_ToDoListApp.swift */,
 				AF6DB6BF2C8A803E004E9A40 /* ContentView.swift */,
+				DA60099E2C8AFDC800B0A0D8 /* ToDoDetailView.swift */,
 				AF6DB6CB2C8A8C9D004E9A40 /* Todo.swift */,
 				AF6DB6C12C8A803F004E9A40 /* Assets.xcassets */,
 				AF6DB6C32C8A803F004E9A40 /* Preview Content */,
@@ -143,6 +146,7 @@
 				AF6DB6C02C8A803E004E9A40 /* ContentView.swift in Sources */,
 				AF6DB6CC2C8A8C9D004E9A40 /* Todo.swift in Sources */,
 				AF6DB6BE2C8A803E004E9A40 /* SwiftUI_ToDoListApp.swift in Sources */,
+				DA60099F2C8AFDC800B0A0D8 /* ToDoDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

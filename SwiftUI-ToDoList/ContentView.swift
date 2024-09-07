@@ -46,7 +46,7 @@ struct ContentView: View {
                                 todo.isCompleted.toggle()
                             }
                         NavigationLink {
-                            Text("다음 화면 입니다.")
+                            ToDoDetailView(todo: todo)
                         } label: {
                             Text(todo.title)
                                 .strikethrough(todo.isCompleted, color: Color.gray)
